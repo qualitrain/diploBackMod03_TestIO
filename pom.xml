@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>mx.com.qtx.appmantto</groupId>
-    <artifactId>Mod03_TestIO</artifactId>
+    <artifactId>diplobackMod03_TestIO</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
