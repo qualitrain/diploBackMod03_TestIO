@@ -3,6 +3,8 @@ package mx.com.qtx.mod03TestIO.c_codepoints;
 
 import mx.com.qtx.mod03TestIO.c_codepoints.lectores.Lector01A_Texto_UTF8;
 import mx.com.qtx.mod03TestIO.c_codepoints.lectores.Lector01B_TextoISO8859_1;
+import mx.com.qtx.mod03TestIO.c_codepoints.lectores.Lector02_CodePoints_UTF8;
+import mx.com.qtx.mod03TestIO.c_codepoints.lectores.Lector05_NIO2Simple_UTF8;
 import mx.com.qtx.mod03TestIO.c_codepoints.persistores.PersistorISO8859_1;
 import mx.com.qtx.mod03TestIO.c_codepoints.persistores.PersistorUTF8;
 import mx.com.qtx.mod03TestIO.util.Util;
@@ -90,10 +92,10 @@ public class DemoCaracteresYCharset {
     }
 
     private static Charset getCharsetAleatorio() {
-        final int numAleatorio = getNumAleatorio();
-        if(numAleatorio % 2 == 0)
-             return StandardCharsets.ISO_8859_1;
-        else
+//        final int numAleatorio = getNumAleatorio();
+//        if(numAleatorio % 2 == 0)
+//             return StandardCharsets.ISO_8859_1;
+//        else
              return StandardCharsets.UTF_8;
     }
 
@@ -103,25 +105,25 @@ public class DemoCaracteresYCharset {
     }
 
     private static ILectorArcTexto getLectorArcTexto() {
-        final int numAleatorio = getNumAleatorio();
-        if(numAleatorio % 2 == 0)
-            return new Lector01B_TextoISO8859_1();
-        else
-            return new Lector01A_Texto_UTF8();                // Manejo "afortunado" de emoticones y codepoints
+//        final int numAleatorio = getNumAleatorio();
+//        if(numAleatorio % 2 == 0)
+//            return new Lector01B_TextoISO8859_1();
+//        else
+//            return new Lector01A_Texto_UTF8();                // Manejo "afortunado" de emoticones y codepoints
 
 //          return new Lector02_CodePoints_UTF8();  // No une con emoticones compuestos
 //          return new Lector03_CodePointsDidactico_UTF8(); // No une emoticones compuestos. Muestra ZWJ (Zero Width Joiner, U+200D)
 //          return new Lector04_CodePointsConZWJ_UTF8();    // No une emoticones compuestos. Muestra ZWJ (Zero Width Joiner, U+200D). Rebuscado
-//          return new Lector05_NIO2Simple_UTF8();          // Resuelve bien los emoticones simples y compuestos
+          return new Lector05_NIO2Simple_UTF8();          // Resuelve bien los emoticones simples y compuestos
 //          return new Lector06_NIO2xLinea_UTF8();          // Resuelve bien los emoticones simples y compuestos
 //          return new Lector07_CodePointsBuffered_UTF8();    // Lee con mayor eficiencia anidando un buffer. Usa decorador
     }
 
     private static IPersistorBytesToChars getPersistorBytesToChras() {
-        final int numAleatorio = getNumAleatorio();
-        if(numAleatorio % 2 == 0)
-            return new PersistorISO8859_1();
-        else
+//        final int numAleatorio = getNumAleatorio();
+//        if(numAleatorio % 2 == 0)
+//            return new PersistorISO8859_1();
+//        else
             return new PersistorUTF8();
     }
 
