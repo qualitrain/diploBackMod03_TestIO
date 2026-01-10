@@ -1,0 +1,8 @@
+Ejemplo de archivo
+de entrada que será leído
+caracter a caracter
+y que contiene caracteres cuyo
+despliegue depende del set de caracteres
+vocales mayúsculas con acentos: [Á,É,Í,Ó,Ú]
+vocales minúsculas con acentos: [á,é,í,ó,ú]
+otros caracteres del español: [Ñ,ñ]
